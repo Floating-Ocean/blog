@@ -1,0 +1,291 @@
+<!doctype html><html data-theme="light" lang="zh-CN"><head><meta charset="UTF-8"><meta content="IE=edge" http-equiv="X-UA-Compatible"><meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport"><title>Codeforces - Round 852 Div 2 | Blog - Floating Ocean</title><meta content="Floating Ocean" name="author"><meta content="Floating Ocean" name="copyright"><meta content="telephone=no" name="format-detection"><meta content="#fcfcfc" name="theme-color"><meta content="/warn:Contestant(alt). Rank 6738. Rating -86 (+414 -500).  A. Yet Another Promotion题意定义两天内提供购物服务，每天的货物价格分别为 $a, b$，在第一天存在促销活动，购买 $m$ 个货物后会赠送一个。输出购买 $n$ 个货物的最少花费。 思路对于 $m+1$ 个所需货物，$m \times a $ 和 $(m" name="description"> <meta content="article" property="og:type"> <meta content="Codeforces - Round 852 Div 2" property="og:title"> <meta content="https://floating-ocean.github.io/blog/posts/185684192/index.html" property="og:url"> <meta content="Blog - Floating Ocean" property="og:site_name"> <meta content="/warn:Contestant(alt). Rank 6738. Rating -86 (+414 -500).  A. Yet Another Promotion题意定义两天内提供购物服务，每天的货物价格分别为 $a, b$，在第一天存在促销活动，购买 $m$ 个货物后会赠送一个。输出购买 $n$ 个货物的最少花费。 思路对于 $m+1$ 个所需货物，$m \times a $ 和 $(m" property="og:description"> <meta content="zh_CN" property="og:locale"> <meta content="https://q2.qlogo.cn/headimg_dl?dst_uin=2810482050&spec=100" property="og:image"> <meta content="2023-02-14T05:20:18.000Z" property="article:published_time"> <meta content="2023-03-05T16:02:41.333Z" property="article:modified_time"> <meta content="Floating Ocean" property="article:author"> <meta content="Codeforces" property="article:tag"> <meta content="summary" name="twitter:card"> <meta content="https://q2.qlogo.cn/headimg_dl?dst_uin=2810482050&spec=100" name="twitter:image"><link href="/blog/img/favicon.png" rel="shortcut icon"><link href="https://floating-ocean.github.io/blog/posts/185684192/index.html" rel="canonical"><link href="//cdn.jsdelivr.net" rel="preconnect"><link href="//busuanzi.ibruce.info" rel="preconnect"><link href="/blog/css/index.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" media="print" onload='this.media="all"'><link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" rel="stylesheet" media="print" onload='this.media="all"'><script>const GLOBAL_CONFIG = { 
+  root: '/blog/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"Codeforces - Round 852 Div 2",isPost:!0,isHome:!1,isHighlightShrink:!1,isToc:!0,postUpdate:"2023-03-06 00:02:41"}</script><noscript><style type="text/css">#nav{opacity:1}.justified-gallery img{opacity:1}#post-meta time,#recent-posts time{display:inline!important}</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#121212')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fcfcfc')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta content="Hexo 5.4.2" name="generator"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="is-center avatar-img"><img alt="avatar" onerror='onerror=null,src="/img/friend_404.gif"' src="https://q2.qlogo.cn/headimg_dl?dst_uin=2810482050&spec=100"></div><div class="is-center site-data sidebar-site-data"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">76</div></a><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr><div class="menus_items"><div class="menus_item"><a href="/blog/" class="site-page"><i class="fas fa-fw fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a href="/blog/archives/" class="site-page"><i class="fas fa-fw fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a href="/blog/tags/" class="site-page"><i class="fas fa-fw fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a href="/blog/link/" class="site-page"><i class="fas fa-fw fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a href="/blog/about/" class="site-page"><i class="fas fa-fw fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image:url(/blog/img/bg.png)"><nav id="nav"><span id="blog-info"><a href="/blog/" title="Blog - Floating Ocean"><span class="site-name">Blog - Floating Ocean</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a href="/blog/" class="site-page"><i class="fas fa-fw fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a href="/blog/archives/" class="site-page"><i class="fas fa-fw fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a href="/blog/tags/" class="site-page"><i class="fas fa-fw fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a href="/blog/link/" class="site-page"><i class="fas fa-fw fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a href="/blog/about/" class="site-page"><i class="fas fa-fw fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a href="javascript:void(0);" class="site-page"><i class="fas fa-fw fa-bars"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Codeforces - Round 852 Div 2</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw far fa-calendar-alt post-meta-icon"></i><span class="post-meta-label">发表于</span><time datetime="2023-02-14T05:20:18.000Z" title="发表于 2023-02-14 13:20:18" class="post-meta-date-created">2023-02-14</time><span class="post-meta-separator">|</span><i class="fas fa-fw fa-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time datetime="2023-03-05T16:02:41.333Z" title="更新于 2023-03-06 00:02:41" class="post-meta-date-updated">2023-03-06</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" data-flag-title="Codeforces - Round 852 Div 2" id=""><i class="fa-fw far post-meta-icon fa-eye"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-spin fa-solid fa-spinner"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote> <p>/warn:Contestant(alt). Rank 6738. Rating -86 (+414 -500).</p> </blockquote> <h1 id="A-Yet-Another-Promotion"><a href="#A-Yet-Another-Promotion" class="headerlink" title="A. Yet Another Promotion"></a><a href="https://codeforces.com/contest/1793/problem/A" target="_blank" rel="noopener">A. Yet Another Promotion</a></h1><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>定义两天内提供购物服务，每天的货物价格分别为 $a, b$，在第一天存在促销活动，购买 $m$ 个货物后会赠送一个。输出购买 $n$ 个货物的最少花费。</p> <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>对于 $m+1$ 个所需货物，$m \times a $ 和 $(m + 1) \times b$ 分别为第一天和第二天的价格，那么我们只需分类讨论即可：</p> <ol> <li>前者小，那么我们将能参与促销的货物全都在第一天购买，也就是总共有 $\lfloor \frac{n}{m + 1} \rfloor \times m$ 个货物是参与了促销。此时，我们得到了 $\lfloor \frac{n}{m + 1} \rfloor \times (m + 1)$ 个货物，那么剩余的货物就作为正常购买，我们用 $min(a,b)$ 购买即可；</li> <li>后者小，直接全都在第二天买即可。</li> </ol> <p><strong>时间复杂度：$O(1)$</strong></p> <h3 id="对应AC代码"><a href="#对应AC代码" class="headerlink" title="对应AC代码"></a>对应AC代码</h3><pre class="language-cpp line-numbers" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token keyword directive">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token keyword directive">define</span> <span class="token macro-name">int</span> <span class="token expression"><span class="token keyword">long</span> <span class="token keyword">long</span></span></span>
+
+<span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">1010</span><span class="token punctuation">;</span>
+
+<span class="token keyword">signed</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ios<span class="token punctuation double-colon">::</span><span class="token function">sync_with_stdio</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> cin<span class="token punctuation">.</span><span class="token function">tie</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> cout<span class="token punctuation">.</span><span class="token function">tie</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> t<span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> t<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>t <span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> n<span class="token punctuation">,</span> m<span class="token punctuation">;</span>
+        cin <span class="token operator">>></span> a <span class="token operator">>></span> b <span class="token operator">>></span> n <span class="token operator">>></span> m<span class="token punctuation">;</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token function">min</span><span class="token punctuation">(</span>n <span class="token operator">*</span> b<span class="token punctuation">,</span> <span class="token punctuation">(</span>n <span class="token operator">/</span> <span class="token punctuation">(</span>m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> m <span class="token operator">*</span> a <span class="token operator">+</span> <span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token punctuation">(</span>n <span class="token operator">/</span> <span class="token punctuation">(</span>m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">min</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token char">'\n'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="line-numbers-rows" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre> <blockquote> <p>一个大铸币没看懂题卡了半天</p> </blockquote> <h1 id="B-Fedya-and-Array"><a href="#B-Fedya-and-Array" class="headerlink" title="B. Fedya and Array"></a><a href="https://codeforces.com/contest/1793/problem/B" target="_blank" rel="noopener">B. Fedya and Array</a></h1><h2 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h2><p>给出如下定义：</p> <p>若一个元素的相邻元素都比它大，那么定义其为 <em>local minimum</em>；若一个元素的相邻元素都比它小，那么定义其为 <em>local maximum</em>。</p> <p>给定一个首尾相连的序列中 <em>local maximum</em> 的总和和 <em>local minimum</em> 的总和 $x, y$，构建该序列，满足相邻数相差 $1$，且长度最短。</p> <h2 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h2><p>显然，$y, y-1, \ldots , x , x + 1 , \ldots, y - 1$ 一定是一个符合条件的序列，下面我们来证明一下可行性：</p> <p>若 $a_i$ 和 $b_i$ 为相邻的 <em>local maximum</em> 和 <em>local minimum</em> ，那么对于 $a_i$，想要得到 $b_i$，就必须得有 $a_i - b_i$ 个数字，因而我们可以得到下面的式子：</p> <p>$len = (a_1 - b_1) + (a_2 - b_1) + (a_2 - b_2) + \ldots + (a_k - b_k) + (a_1 - b_k)$</p> <p>化简即可得到 $2(x - y)$，证毕。</p> <p><strong>时间复杂度：$O(n)$</strong></p> <h3 id="对应AC代码-1"><a href="#对应AC代码-1" class="headerlink" title="对应AC代码"></a>对应AC代码</h3><pre class="language-cpp line-numbers" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token keyword directive">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token keyword directive">define</span> <span class="token macro-name">int</span> <span class="token expression"><span class="token keyword">long</span> <span class="token keyword">long</span></span></span>
+
+<span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">2e5</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">,</span> inf <span class="token operator">=</span> <span class="token number">0x3f3f3f3f</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> a<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">signed</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ios<span class="token punctuation double-colon">::</span><span class="token function">sync_with_stdio</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> t<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> t<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>t <span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        cin <span class="token operator">>></span> x <span class="token operator">>></span> y<span class="token punctuation">;</span>
+        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> ans<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span>x<span class="token punctuation">;</span>i<span class="token operator">></span>y<span class="token punctuation">;</span>i<span class="token operator">--</span><span class="token punctuation">)</span> ans<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span>y<span class="token punctuation">;</span>i<span class="token operator">&lt;</span>x<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> ans<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cout <span class="token operator">&lt;&lt;</span> ans<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token char">'\n'</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token operator">&</span>i <span class="token operator">:</span> ans<span class="token punctuation">)</span> cout <span class="token operator">&lt;&lt;</span> i <span class="token operator">&lt;&lt;</span> <span class="token char">' '</span><span class="token punctuation">;</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token char">'\n'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="line-numbers-rows" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre> <blockquote> <p>好妙的做法</p> </blockquote> <h1 id="C-Dora-and-Search"><a href="#C-Dora-and-Search" class="headerlink" title="C. Dora and Search"></a><a href="https://codeforces.com/contest/1793/problem/C" target="_blank" rel="noopener">C. Dora and Search</a></h1><h2 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h2><p>给定一个排列，输出一段连续区间的左右端点的下标，满足两个端点既不是区间内的最大值，也不是区间内的最小值。</p> <h2 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h2><p>我们可以用类似双指针的方法，从两侧开始夹逼，只要去除区间外的点后，最大值和最小值都不在端点，那就直接输出。</p> <p><strong>时间复杂度：$O(n)$</strong></p> <h3 id="对应AC代码-2"><a href="#对应AC代码-2" class="headerlink" title="对应AC代码"></a>对应AC代码</h3><pre class="language-cpp line-numbers" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token keyword directive">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token keyword directive">define</span> <span class="token macro-name">int</span> <span class="token expression"><span class="token keyword">long</span> <span class="token keyword">long</span></span></span>
+
+<span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">2e5</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">,</span> inf <span class="token operator">=</span> <span class="token number">0x3f3f3f3f</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> a<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">signed</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ios<span class="token punctuation double-colon">::</span><span class="token function">sync_with_stdio</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> t<span class="token punctuation">,</span> n<span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> t<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>t <span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> cin <span class="token operator">>></span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> l <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> r <span class="token operator">=</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> vl <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> vr <span class="token operator">=</span> n<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>l <span class="token operator">&lt;=</span> r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>l<span class="token punctuation">]</span> <span class="token operator">==</span> vl<span class="token punctuation">)</span> l <span class="token operator">++</span><span class="token punctuation">,</span> vl <span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>l<span class="token punctuation">]</span> <span class="token operator">==</span> vr<span class="token punctuation">)</span> l <span class="token operator">++</span><span class="token punctuation">,</span> vr <span class="token operator">--</span><span class="token punctuation">;</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>r<span class="token punctuation">]</span> <span class="token operator">==</span> vl<span class="token punctuation">)</span> r <span class="token operator">--</span><span class="token punctuation">,</span> vl <span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>r<span class="token punctuation">]</span> <span class="token operator">==</span> vr<span class="token punctuation">)</span> r <span class="token operator">--</span><span class="token punctuation">,</span> vr <span class="token operator">--</span><span class="token punctuation">;</span>
+            <span class="token keyword">else</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>l <span class="token operator">&lt;=</span> r<span class="token punctuation">)</span> cout <span class="token operator">&lt;&lt;</span> l <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token char">' '</span> <span class="token operator">&lt;&lt;</span> r <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token char">'\n'</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span> cout <span class="token operator">&lt;&lt;</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token char">'\n'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="line-numbers-rows" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre> <blockquote> <p>不是排列的话就只有找拐点了</p> </blockquote> <link href="/blog/css/spoiler.css" rel="stylesheet" type="text/css"><script src="/blog/js/spoiler.js" async type="text/javascript"></script></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://github.com/Floating-Ocean" target="_blank" rel="noopener">Floating Ocean</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://floating-ocean.github.io/blog/posts/185684192/">https://floating-ocean.github.io/blog/posts/185684192/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://floating-ocean.github.io/blog" target="_blank">Blog - Floating Ocean</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a href="/blog/tags/Codeforces/" class="post-meta__tags">Codeforces</a></div><div class="post_share"><div class="social-share" data-image="https://q2.qlogo.cn/headimg_dl?dst_uin=2810482050&spec=100" data-sites="facebook,twitter,wechat,weibo,qq"></div><link href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" rel="stylesheet" media="print" onload='this.media="all"'><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav id="pagination" class="pagination-post"><div class="prev-post pull-left"><a href="/blog/posts/1807504053/" title="Codeforces - Educational Codeforces Round 139"><div class="cover" style="background:var(--btn-hover-color)"></div><div class="pagination-info"><div class="label">上一篇文章</div><div class="prev_info">Codeforces - Educational Codeforces Round 139</div></div></a></div><div class="next-post pull-right"><a href="/blog/posts/989416061/" title="Codeforces - Round 851 Div 2"><div class="cover" style="background:var(--btn-hover-color)"></div><div class="pagination-info"><div class="label">下一篇文章</div><div class="next_info">Codeforces - Round 851 Div 2</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-fw fa-thumbs-up"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/blog/posts/3139923560/" title="Codeforces - CodeTON Round 4 Div 1 plus 2"><div class="cover" style="background:var(--default-bg-color)"></div><div class="content is-center"><div class="title">Codeforces - CodeTON Round 4 Div 1 plus 2</div><div class="date"><i class="fa-fw far fa-calendar-alt"></i> 2023-04-03</div></div></a></div><div><a href="/blog/posts/3616853689/" title="Codeforces - 2023愚人节场"><div class="cover" style="background:var(--default-bg-color)"></div><div class="content is-center"><div class="title">Codeforces - 2023愚人节场</div><div class="date"><i class="fa-fw far fa-calendar-alt"></i> 2023-04-03</div></div></a></div><div><a href="/blog/posts/3027651998/" title="Codeforces - Round 861 Div 2"><div class="cover" style="background:var(--default-bg-color)"></div><div class="content is-center"><div class="title">Codeforces - Round 861 Div 2</div><div class="date"><i class="fa-fw far fa-calendar-alt"></i> 2023-03-30</div></div></a></div><div><a href="/blog/posts/302073386/" title="Codeforces - Round 860 Div 2"><div class="cover" style="background:var(--default-bg-color)"></div><div class="content is-center"><div class="title">Codeforces - Round 860 Div 2</div><div class="date"><i class="fa-fw far fa-calendar-alt"></i> 2023-03-27</div></div></a></div><div><a href="/blog/posts/759924825/" title="Codeforces - Educational Codeforces Round 145"><div class="cover" style="background:var(--default-bg-color)"></div><div class="content is-center"><div class="title">Codeforces - Educational Codeforces Round 145</div><div class="date"><i class="fa-fw far fa-calendar-alt"></i> 2023-03-25</div></div></a></div><div><a href="/blog/posts/3765805359/" title="Codeforces - Round 859 Div 4"><div class="cover" style="background:var(--default-bg-color)"></div><div class="content is-center"><div class="title">Codeforces - Round 859 Div 4</div><div class="date"><i class="fa-fw far fa-calendar-alt"></i> 2023-03-23</div></div></a></div></div></div><hr><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-fw fa-comments"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img alt="avatar" onerror='this.onerror=null,this.src="/blog/img/friend_404.gif"' src="https://q2.qlogo.cn/headimg_dl?dst_uin=2810482050&spec=100"></div><div class="author-info__name">Floating Ocean</div><div class="author-info__description">To write down something.</div></div><div class="is-center site-data card-info-data"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">76</div></a><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="is-center card-info-social-icons"><a href="https://github.com/Floating-Ocean" class="social-icon" title="Github" target="_blank"><i class="fa-github fab"></i><span>Github</span></a><a href="mailto:sea113290980@qq.com" class="social-icon" title="Email" target="_blank"><i class="fas fa-envelope"></i><span>Email</span></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">站点迁移到新主题 Butterfly 啦！功能很全呢！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a href="#A-Yet-Another-Promotion" class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">A. Yet Another Promotion</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a href="#%E9%A2%98%E6%84%8F" class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a href="#%E6%80%9D%E8%B7%AF" class="toc-link"><span class="toc-number">1.2.</span> <span class="toc-text">思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a href="#%E5%AF%B9%E5%BA%94AC%E4%BB%A3%E7%A0%81" class="toc-link"><span class="toc-number">1.2.1.</span> <span class="toc-text">对应AC代码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a href="#B-Fedya-and-Array" class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">B. Fedya and Array</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a href="#%E9%A2%98%E6%84%8F-1" class="toc-link"><span class="toc-number">2.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a href="#%E6%80%9D%E8%B7%AF-1" class="toc-link"><span class="toc-number">2.2.</span> <span class="toc-text">思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a href="#%E5%AF%B9%E5%BA%94AC%E4%BB%A3%E7%A0%81-1" class="toc-link"><span class="toc-number">2.2.1.</span> <span class="toc-text">对应AC代码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a href="#C-Dora-and-Search" class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">C. Dora and Search</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a href="#%E9%A2%98%E6%84%8F-2" class="toc-link"><span class="toc-number">3.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a href="#%E6%80%9D%E8%B7%AF-2" class="toc-link"><span class="toc-number">3.2.</span> <span class="toc-text">思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a href="#%E5%AF%B9%E5%BA%94AC%E4%BB%A3%E7%A0%81-2" class="toc-link"><span class="toc-number">3.2.1.</span> <span class="toc-text">对应AC代码</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a href="/blog/posts/3139923560/" class="title" title="Codeforces - CodeTON Round 4 Div 1 plus 2">Codeforces - CodeTON Round 4 Div 1 plus 2</a><time datetime="2023-04-03T07:54:23.000Z" title="发表于 2023-04-03 15:54:23">2023-04-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a href="/blog/posts/3616853689/" class="title" title="Codeforces - 2023愚人节场">Codeforces - 2023愚人节场</a><time datetime="2023-04-03T06:03:03.000Z" title="发表于 2023-04-03 14:03:03">2023-04-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a href="/blog/posts/3027651998/" class="title" title="Codeforces - Round 861 Div 2">Codeforces - Round 861 Div 2</a><time datetime="2023-03-30T03:23:42.000Z" title="发表于 2023-03-30 11:23:42">2023-03-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a href="/blog/posts/302073386/" class="title" title="Codeforces - Round 860 Div 2">Codeforces - Round 860 Div 2</a><time datetime="2023-03-27T04:34:45.000Z" title="发表于 2023-03-27 12:34:45">2023-03-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a href="/blog/posts/1688399541/" class="title" title="AtCoder - ABC 295">AtCoder - ABC 295</a><time datetime="2023-03-25T16:49:20.000Z" title="发表于 2023-03-26 00:49:20">2023-03-26</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">©2022 - 2023 Floating Ocean. All Rights Reserved.</div><div class="framework-info"><span>Powered by </span><a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a><span> & </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener">Butterfly.</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" title="阅读模式" type="button"><i class="fas fa-book-open"></i></button><button id="darkmode" title="浅色和深色模式转换" type="button"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" title="单栏和双栏切换" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置" type="button"><i class="fas fa-cog fa-spin"></i></button><button id="mobile-toc-button" title="目录" type="button" class="close"><i class="fas fa-list-ul"></i></button><a href="#post-comment" title="直达评论" id="to_comment"><i class="fas fa-comments"></i></a><button id="go-up" title="回到顶部" type="button"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/blog/js/utils.js"></script><script src="/blog/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container').forEach(node => {
+            if (node.hasAttribute('display')) {
+              btf.wrap(node, 'div', { class: 'mathjax-overflow' })
+            } else {
+              btf.wrap(node, 'span', { class: 'mathjax-overflow' })
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '5niM2G27RlnYT0Ypt9sljDwh-gzGzoHsz',
+      appKey: 'YMeqrxdiBhvyxtN6nWjHgApF',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js" defer="defer" color="0,0,0" count="64" id="canvas_nest" mobile="false" opacity="0.15" zindex="-2"></script><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async data-pjax></script></div></body></html>
