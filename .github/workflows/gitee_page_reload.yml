@@ -1,6 +1,15 @@
 name: gitee-page-reload
 on: page_build
 jobs:
+  git-mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wearerequired/git-mirror-action@v1
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        with:
+          source-repo: "git@github.com:Floating-Ocean/blog.git"
+          destination-repo: "git@gitee.com:Floating-Ocean/blog.git"
   reload-pages:
     runs-on: ubuntu-latest
     steps:
