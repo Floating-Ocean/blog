@@ -1,0 +1,5 @@
+name: gitee_page_reload
+  uses: mizuka-wu/gitee-pages-action@v1.0.0
+  with:
+    repository: Floating-Ocean/blog
+    cookie: ${{ secrets.GITEE_COOKIE }}
