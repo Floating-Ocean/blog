@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://floating-ocean.github.io/blog/posts/766209649/</loc>
+    
+    <lastmod>2023-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://floating-ocean.github.io/blog/posts/1521245927/</loc>
     
     <lastmod>2023-07-05</lastmod>
@@ -1195,7 +1204,7 @@
   </url>
   
   <url>
-    <loc>https://floating-ocean.github.io/blog/tags/AtCoder/</loc>
+    <loc>https://floating-ocean.github.io/blog/tags/LitCTF/</loc>
     <lastmod>2023-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1209,14 +1218,14 @@
   </url>
   
   <url>
-    <loc>https://floating-ocean.github.io/blog/tags/Codeforces/</loc>
+    <loc>https://floating-ocean.github.io/blog/tags/AtCoder/</loc>
     <lastmod>2023-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://floating-ocean.github.io/blog/tags/LitCTF/</loc>
+    <loc>https://floating-ocean.github.io/blog/tags/Codeforces/</loc>
     <lastmod>2023-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
