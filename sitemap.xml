@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://floating-ocean.github.io/blog/link/links.json</loc>
+    <loc>https://floating-ocean.github.io/blog/posts/2656694144/</loc>
     
     <lastmod>2023-07-28</lastmod>
     
@@ -12,6 +12,15 @@
   
   <url>
     <loc>https://floating-ocean.github.io/blog/posts/2855546043/</loc>
+    
+    <lastmod>2023-07-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://floating-ocean.github.io/blog/link/links.json</loc>
     
     <lastmod>2023-07-28</lastmod>
     
@@ -86,15 +95,6 @@
     <loc>https://floating-ocean.github.io/blog/posts/2417247537/</loc>
     
     <lastmod>2023-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://floating-ocean.github.io/blog/posts/2656694144/</loc>
-    
-    <lastmod>2023-07-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1269,13 +1269,6 @@
   </url>
   
   <url>
-    <loc>https://floating-ocean.github.io/blog/tags/Welcome/</loc>
-    <lastmod>2023-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://floating-ocean.github.io/blog/tags/FjnuOJ/</loc>
     <lastmod>2023-07-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -1283,7 +1276,7 @@
   </url>
   
   <url>
-    <loc>https://floating-ocean.github.io/blog/tags/LitCTF/</loc>
+    <loc>https://floating-ocean.github.io/blog/tags/Welcome/</loc>
     <lastmod>2023-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1298,6 +1291,13 @@
   
   <url>
     <loc>https://floating-ocean.github.io/blog/tags/Codeforces/</loc>
+    <lastmod>2023-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://floating-ocean.github.io/blog/tags/LitCTF/</loc>
     <lastmod>2023-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
