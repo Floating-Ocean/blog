@@ -1334,14 +1334,7 @@
 
   
   <url>
-    <loc>https://floating-ocean.github.io/blog/tags/FjnuOJ/</loc>
-    <lastmod>2023-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://floating-ocean.github.io/blog/tags/%E7%89%9B%E5%AE%A22023%E5%AF%92%E5%81%87%E9%9B%86%E8%AE%AD/</loc>
+    <loc>https://floating-ocean.github.io/blog/tags/AtCoder/</loc>
     <lastmod>2023-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1355,6 +1348,13 @@
   </url>
   
   <url>
+    <loc>https://floating-ocean.github.io/blog/tags/%E7%89%9B%E5%AE%A22023%E5%AF%92%E5%81%87%E9%9B%86%E8%AE%AD/</loc>
+    <lastmod>2023-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://floating-ocean.github.io/blog/tags/Welcome/</loc>
     <lastmod>2023-08-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -1362,7 +1362,7 @@
   </url>
   
   <url>
-    <loc>https://floating-ocean.github.io/blog/tags/AtCoder/</loc>
+    <loc>https://floating-ocean.github.io/blog/tags/FjnuOJ/</loc>
     <lastmod>2023-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
