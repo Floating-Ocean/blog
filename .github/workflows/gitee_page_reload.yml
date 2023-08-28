@@ -16,5 +16,5 @@ jobs:
         with:
           repository: Floating-Ocean/blog
           cookie: ${{ secrets.GITEE_COOKIE }}
-          branch: main
+          branch: gp-pages
           https: true
