@@ -2,7 +2,7 @@
 
 一个基于 Hexo & Butterfly 的个人博客。
 
-<a align="right" href="https://github.com/Floating-Ocean/blog/commits/gh-pages"><img src="https://img.shields.io/github/last-commit/Floating-Ocean/blog/gh-pages?style=flat-square"></a> <a align="right" href="https://floating-ocean.github.io/blog"><img src="https://img.shields.io/github/deployments/Floating-Ocean/blog/github-pages?style=flat-square"></a> <a align="right" href="https://github.com/Floating-Ocean/blog/self-deploy.yml"><img src="https://img.shields.io/github/actions/workflow/status/Floating-Ocean/blog/self-deploy.yml?include_prereleases&style=flat-square" alt="GitHub releases"></a> <a align="right" href="https://github.com/Floating-Ocean/blog/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Floating-Ocean/blog?style=flat-square" alt="GitHub releases"></a>
+<a align="right" href="https://github.com/Floating-Ocean/blog/commits/gh-pages"><img src="https://img.shields.io/github/last-commit/Floating-Ocean/blog/gh-pages?style=flat-square"></a> <a align="right" href="https://floating-ocean.github.io/blog"><img src="https://img.shields.io/github/deployments/Floating-Ocean/blog/github-pages?style=flat-square"></a> <a align="right" href="https://github.com/Floating-Ocean/blog/blob/main/.github/workflows/gitee_page_reload.yml"><img src="https://img.shields.io/github/actions/workflow/status/Floating-Ocean/blog/gitee_page_reload.yml?include_prereleases&style=flat-square" alt="GitHub releases"></a> <a align="right" href="https://github.com/Floating-Ocean/blog/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Floating-Ocean/blog?style=flat-square" alt="GitHub releases"></a>
 
 ****
 
