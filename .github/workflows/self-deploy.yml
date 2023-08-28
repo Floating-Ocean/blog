@@ -32,16 +32,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Switch to ap branch
-        run: git checkout gp-pages
-      - name: Get files from ap branch
-        run: git checkout gp-pages -- /
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           # Upload entire repository
+          ref: gp-pages
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
