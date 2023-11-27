@@ -70,3 +70,4 @@ jobs:
           branch: main
           force: true
           github_token: ${{ secrets.CLONE_TOKEN }}
+          directory: merged-repo
