@@ -1,9 +1,5 @@
 name: push-to-merge-collection
-
-on:
-  push:
-    branches:
-      - gh-pages
+on: page_build
 
 jobs:
   push:
