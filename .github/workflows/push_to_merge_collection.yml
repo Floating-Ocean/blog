@@ -36,5 +36,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.CLONE_TOKEN }}
-          repository: Test/test
+          repository: Floating-Ocean/Merged-Website
           force: true
