@@ -15,7 +15,6 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-          token: ${{ secrets.CLONE_TOKEN }}
 
       - name: Remote Checkout
         uses: actions/checkout@v3
@@ -24,8 +23,8 @@ jobs:
 
       - name: Commit to Merge Collection
         run: |
-          git config --global user.name 'Floating-Ocean'
-          git config --global user.email 'sea113290980@qq.com'
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git clone https://github.com/Floating-Ocean/Merged-Website.git merged-repo
           cd merged-repo
           rm -rf blog
@@ -39,7 +38,6 @@ jobs:
       - name: Push Changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.CLONE_TOKEN }}
           repository: Floating-Ocean/Merged-Website
           branch: main
           force: true
