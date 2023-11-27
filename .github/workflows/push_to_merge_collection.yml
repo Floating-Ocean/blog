@@ -23,7 +23,7 @@ jobs:
           mkdir blog
           cd ..
           ls
-          cp -r * merged-repo/blog/ --exclude merged-repo
+          cp -r --exclude=merged-repo * merged-repo/blog/
           cd merged-repo
           cd blog
           rm -rf .git
