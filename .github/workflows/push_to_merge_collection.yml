@@ -22,8 +22,7 @@ jobs:
           rm -rf blog
           mkdir blog
           cd ..
-          ls
-          cp -r --exclude=merged-repo * merged-repo/blog/
+          ls -a | grep -v '^\(\.\{1,2\}\|merged-repo\)$' | xargs cp -at merged-repo/blog/
           cd merged-repo
           cd blog
           rm -rf .git
