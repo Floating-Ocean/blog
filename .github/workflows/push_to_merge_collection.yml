@@ -10,14 +10,14 @@ jobs:
       
     steps:
       - name: Self Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@master
         with:
           ref: main
           fetch-depth: 0
           persist-credentials: false
 
       - name: Remote Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@master
         with:
           repository: Floating-Ocean/Merged-Website
           ref: main
