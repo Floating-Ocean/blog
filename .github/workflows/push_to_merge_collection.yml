@@ -60,6 +60,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          ACCESS_TOKEN: ${{ secrets.CLONE_TOKEN }}
-          REPOSITORY_NAME: Floating-Ocean/Merged-Website
-          BRANCH: main
+          access_token: ${{ secrets.CLONE_TOKEN }}
+          repository_name: Floating-Ocean/Merged-Website
+          branch: main
+          folder: .
