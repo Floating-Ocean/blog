@@ -2,6 +2,7 @@ name: push-to-merge-collection
 on: page_build
 
 permissions:
+  contents: write
   repository-projects: write
 
 jobs:
