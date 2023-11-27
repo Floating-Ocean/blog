@@ -41,4 +41,4 @@ jobs:
           repository: Floating-Ocean/Merged-Website
           branch: main
           force: true
-          persist-credentials: false
+          github_token: ${{ secrets.CLONE_TOKEN }}
