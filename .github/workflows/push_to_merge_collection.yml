@@ -26,7 +26,7 @@ jobs:
 
       - name: Get Current Date
         id: date
-        run: echo "::set-output name=date::$(date +'%Y/%m/%d-%H:%i:%S')"
+        run: echo "::set-output name=date::$(date +'%Y/%m/%d-%H:%M:%S')"
           
       - name: Commit to Merge Collection
         run: |
