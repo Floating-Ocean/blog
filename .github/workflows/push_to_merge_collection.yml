@@ -1,6 +1,9 @@
 name: push-to-merge-collection
 on: page_build
 
+permissions:
+  repository-projects: write
+
 jobs:
   push:
     runs-on: ubuntu-latest
