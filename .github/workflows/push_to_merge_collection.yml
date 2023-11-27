@@ -39,5 +39,5 @@ jobs:
           git commit -m "First update blog"
           git push --set-upstream origin main
           git remote remove origin
-          git remote add origin https://${{ secrets.CLONE_TOKEN }}@github.com/Floating-Ocean/Merged-Website
+          git remote add origin https://Floating-Ocean:${{ secrets.CLONE_TOKEN }}@github.com/Floating-Ocean/Merged-Website
           git push
