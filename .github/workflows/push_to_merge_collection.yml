@@ -23,8 +23,8 @@ jobs:
 
       - name: Commit to Merge Collection
         run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
+          git config --global user.email "sea113290980@qq.com"
+          git config --global user.name "Floating-Ocean"
           git clone https://github.com/Floating-Ocean/Merged-Website.git merged-repo
           cd merged-repo
           rm -rf blog
