@@ -37,11 +37,6 @@ jobs:
           cd ..
           git add .
           git commit -m "First update blog"
-          
-      - name: Push Changes
-        uses: ad-m/github-push-action@master
-        with:
-          repository: Floating-Ocean/Merged-Website
-          branch: main
-          force: true
-          github_token: ${{ secrets.CLONE_TOKEN }}
+          git remote remove origin
+          git remote add origin https://${{ secrets.CLONE_TOKEN }}@github.com/Floating-Ocean/Merged-Website
+          git push
