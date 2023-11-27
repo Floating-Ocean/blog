@@ -23,6 +23,10 @@ jobs:
           ref: main
           fetch-depth: 0
           persist-credentials: false
+
+      - name: Get Current Date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y/%m/%d-%H:%i:%S')"
           
       - name: Commit to Merge Collection
         run: |
@@ -38,7 +42,7 @@ jobs:
           cd ..
           pwd
           git add *
-          git commit -m "First update blog"
+          git commit -m "blog-${{ steps.date.outputs.date }}"
           
       - name: Push Changes
         uses: ad-m/github-push-action@master
