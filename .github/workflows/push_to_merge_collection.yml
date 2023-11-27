@@ -24,20 +24,25 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Push to Merge Collection
+      - name: Commit to Merge Collection
         run: |
           git config --global user.email "sea113290980@qq.com"
           git config --global user.name "Floating-Ocean"
           git clone https://github.com/Floating-Ocean/Merged-Website.git merged-repo
           cd merged-repo
-          rm -rf blog
+          rm -rf blog/*
           git clone https://github.com/Floating-Ocean/blog.git -b gh-pages blog
           cd blog
-          rm -rf .git
+          rm -rf .git/*
           cd ..
-          git add .
+          find $PWD | xargs ls -ld
+          git add *
           git commit -m "First update blog"
-          git push --set-upstream origin main
-          git remote remove origin
-          git remote set-url origin https://${{ secrets.CLONE_TOKEN }}:x-oauth-basic@github.com/Floating-Ocean/Merged-Website.git
-          git push
+          
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          repository: Floating-Ocean/Merged-Website
+          branch: main
+          force: true
+          github_token: ${{ secrets.CLONE_TOKEN }}
