@@ -19,6 +19,7 @@ jobs:
           git config --global user.name 'Floating-Ocean'
           git config --global user.email 'sea113290980@qq.com'
           git clone https://github.com/Floating-Ocean/Merged-Website.git merged-repo
+          cd merged-repo
           rm -rf blog
           mkdir blog
           cd ..
