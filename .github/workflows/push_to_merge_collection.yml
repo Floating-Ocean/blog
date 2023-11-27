@@ -7,16 +7,18 @@ jobs:
 
     steps:
       - name: Self Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+          token: ${{ secrets.CLONE_TOKEN }}
 
       - name: Remote Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: Floating-Ocean/Merged-Website
 
-      - name: Push to Merge Collection
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Commit to Merge Collection
         run: |
           git config --global user.name 'Floating-Ocean'
           git config --global user.email 'sea113290980@qq.com'
@@ -29,6 +31,10 @@ jobs:
           cd ..
           git add .
           git commit -m "First update blog"
-          ssh -T git@github.com
-          git remote add merge git@github.com:Floating-Ocean/Merged-Website.git
-          git push -u merge main
+          
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.CLONE_TOKEN }}
+          repository: Test/test
+          force: true
