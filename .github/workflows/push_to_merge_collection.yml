@@ -25,7 +25,6 @@ jobs:
           cd blog
           rm -rf .git
           cd ..
-          ls
           git add .
           git commit -m "First update blog"
           git remote add origin git@github.com:Floating-Ocean/Merged-Website.git
