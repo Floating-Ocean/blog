@@ -24,7 +24,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Commit to Merge Collection
+      - name: Push to Merge Collection
         run: |
           git config --global user.email "sea113290980@qq.com"
           git config --global user.name "Floating-Ocean"
@@ -37,6 +37,7 @@ jobs:
           cd ..
           git add .
           git commit -m "First update blog"
+          git push --set-upstream origin main
           git remote remove origin
           git remote add origin https://${{ secrets.CLONE_TOKEN }}@github.com/Floating-Ocean/Merged-Website
           git push
