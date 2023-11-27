@@ -36,7 +36,7 @@ jobs:
           rm -rf .git/*
           rm -rf .git/
           cd ..
-          find "$PWD" | xargs ls -ld
+          pwd
           git add *
           git commit -m "First update blog"
           
