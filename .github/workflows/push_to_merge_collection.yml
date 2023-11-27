@@ -1,4 +1,4 @@
-name: Push to Merge Collection
+name: push-to-merge-collection
 
 on:
   push:
