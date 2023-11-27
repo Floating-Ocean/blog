@@ -36,7 +36,7 @@ jobs:
           rm -rf .git
           cd ..
           git add .
-          git commit -a -m "First update blog"
+          git commit -m "First update blog"
           
       - name: Push Changes
         uses: ad-m/github-push-action@master
