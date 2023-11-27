@@ -2,7 +2,7 @@ name: push-to-merge-collection
 on: page_build
 
 jobs:
-  push:
+  clone-repo:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -23,7 +23,7 @@ jobs:
           ref: main
           fetch-depth: 0
           persist-credentials: false
-
+          
       - name: Commit to Merge Collection
         run: |
           git config --global user.email "sea113290980@qq.com"
@@ -39,6 +39,29 @@ jobs:
           pwd
           git add *
           git commit -m "First update blog"
+          
+  apply-push: 
+    runs-on: ubuntu-latest
+    needs: clone-repo
+    permissions:
+      contents: write
+      repository-projects: write
+      
+    steps:
+      - name: Self Checkout
+        uses: actions/checkout@master
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Remote Checkout
+        uses: actions/checkout@master
+        with:
+          repository: Floating-Ocean/Merged-Website
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
           
       - name: Push Changes
         uses: ad-m/github-push-action@master
