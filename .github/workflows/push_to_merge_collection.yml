@@ -13,7 +13,7 @@ jobs:
       - name: Self Checkout
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.head_ref }}
+          ref: main
           fetch-depth: 0
           token: ${{ secrets.CLONE_TOKEN }}
 
@@ -41,4 +41,5 @@ jobs:
         with:
           github_token: ${{ secrets.CLONE_TOKEN }}
           repository: Floating-Ocean/Merged-Website
+          branch: main
           force: true
