@@ -18,14 +18,17 @@ jobs:
         run: |
           git config --global user.name 'Floating-Ocean'
           git config --global user.email 'sea113290980@qq.com'
-          mkdir merged-repo
-          cd merged-repo
-          git clone https://github.com/Floating-Ocean/Merged-Website.git
+          git clone https://github.com/Floating-Ocean/Merged-Website.git merged-repo
           rm -rf blog
           mkdir blog
           cd ..
-          cp -r * merged-repo/blog/
+          ls
+          cp -r * merged-repo/blog/ --exclude merged-repo
           cd merged-repo
+          cd blog
+          rm -rf .git
+          cd ..
+          ls
           git add .
           git commit -m "First update blog"
           git push
