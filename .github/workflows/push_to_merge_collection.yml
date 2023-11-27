@@ -28,7 +28,7 @@ jobs:
           ls
           git add .
           git commit -m "First update blog"
-          git remote add git@github.com:Floating-Ocean/Merged-Website.git
+          git remote add origin git@github.com:Floating-Ocean/Merged-Website.git
           git push -u origin main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
