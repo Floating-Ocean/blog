@@ -51,6 +51,7 @@ jobs:
 
   page-reload:
     runs-on: ubuntu-latest
+    needs: clone-and-push
     permissions:
       contents: write
       repository-projects: write
