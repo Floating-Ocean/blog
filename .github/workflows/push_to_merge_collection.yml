@@ -48,3 +48,17 @@ jobs:
           force: true
           github_token: ${{ secrets.CLONE_TOKEN }}
           directory: /home/runner/work/blog/blog/merged-repo/
+
+  page-reload:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      repository-projects: write
+      
+    steps:
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.CLONE_TOKEN }}
+          REPOSITORY_NAME: Floating-Ocean/Merged-Website
+          BRANCH: main
