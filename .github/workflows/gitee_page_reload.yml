@@ -1,4 +1,4 @@
-name: gitee page reload
+name: gitee-page-reload
 on: page_build
 jobs:
   reload-pages:
