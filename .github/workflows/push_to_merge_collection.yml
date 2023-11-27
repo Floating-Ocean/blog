@@ -21,16 +21,14 @@ jobs:
           git clone https://github.com/Floating-Ocean/Merged-Website.git merged-repo
           cd merged-repo
           rm -rf blog
-          mkdir blog
-          cd ..
-          ls -a | grep -v '^\(\.\{1,2\}\|merged-repo\)$' | xargs cp -at merged-repo/blog/
-          cd merged-repo
+          git clone https://github.com/Floating-Ocean/blog.git -b gh-pages blog
           cd blog
           rm -rf .git
           cd ..
           ls
           git add .
           git commit -m "First update blog"
-          git push
+          git remote add git@github.com:Floating-Ocean/Merged-Website.git
+          git push -u origin main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
