@@ -15,6 +15,8 @@ jobs:
           repository: Floating-Ocean/Merged-Website
 
       - name: Push to Merge Collection
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           git config --global user.name 'Floating-Ocean'
           git config --global user.email 'sea113290980@qq.com'
@@ -27,7 +29,6 @@ jobs:
           cd ..
           git add .
           git commit -m "First update blog"
+          ssh -T git@github.com
           git remote add merge git@github.com:Floating-Ocean/Merged-Website.git
           git push -u merge main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
